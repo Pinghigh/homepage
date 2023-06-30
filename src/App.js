@@ -12,7 +12,6 @@ import {
     GeistProvider,
 } from "@geist-ui/core";
 import {
-    RustPlain,
     CplusplusOriginal,
     Html5Original,
     Css3Original,
@@ -20,7 +19,7 @@ import {
     PythonOriginal,
     HugoOriginal,
 } from "devicons-react";
-import { Mail, Twitter } from "@geist-ui/icons";
+import { Sun, Moon, Mail, Twitter } from "@geist-ui/icons";
 import { useState } from "react";
 
 import { ReactComponent as ArchLogo } from "./img/archlinux-icon.svg";
@@ -30,6 +29,7 @@ import { ReactComponent as OpenZFSLogo } from "./img/OpenZFS.svg";
 import { ReactComponent as NVIMLogo } from "./img/neovim.svg";
 import { ReactComponent as CodiumLogo } from "./img/codium.svg";
 import { ReactComponent as TauriLogo } from "./img/tauri.svg";
+import { ReactComponent as RustLogo } from "./img/rust.svg";
 
 function MyAvatar() {
     return (
@@ -131,7 +131,12 @@ function DownPart() {
                 </Grid>
                 <Grid>
                     <Link href="https://www.rust-lang.org/zh-CN/">
-                        <RustPlain size="80px" />
+                        <RustLogo
+                            style={{
+                                width: "80px",
+                                height: "80px",
+                            }}
+                        />
                     </Link>
                 </Grid>
                 <Grid>
@@ -250,7 +255,6 @@ function App() {
     };
     return (
         <GeistProvider themeType={themeType}>
-            {" "}
             <CssBaseline />
             <div
                 style={{
@@ -263,14 +267,24 @@ function App() {
                 <Card
                     shadow
                     width="50"
-                    height="54"
+                    height="auto"
                     style={{
                         display: "flex",
+                        position: "relative",
                         // alignItems: "center",
                         // justifyContent: "center",
                         margin: "auto auto",
                         // height: "100vh",
                     }}>
+                    <div
+                        style={{
+                            position: "absolute",
+                            top: "5px",
+                            right: "5px",
+                        }}
+                        onClick={switchThemes}>
+                        {themeType === "light" ? <Sun /> : <Moon />}
+                    </div>
                     <div>
                         <Grid.Container
                             alignContent="center"
