@@ -13,8 +13,8 @@ jobs:
                   yarn build
 
             - name: Deploy 🚀
-              uses: JamesIves/github-pages-deploy-action@dev
+              uses: JamesIves/github-pages-deploy-action@release/v4.4.2
               with:
-                  ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-                  BRANCH: pages
-                  FOLDER: dist
+                  token: ${{ secrets.ACCESS_TOKEN }}
+                  branch: pages
+                  folder: dist
