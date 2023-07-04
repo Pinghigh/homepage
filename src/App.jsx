@@ -17,7 +17,6 @@ import {
     Css3Original,
     ReactOriginal,
     PythonOriginal,
-    HugoOriginal,
 } from "devicons-react";
 import { Sun, Moon, Mail, Twitter } from "@geist-ui/icons";
 import { useState } from "react";
@@ -30,6 +29,7 @@ import { ReactComponent as NVIMLogo } from "./img/neovim.svg";
 import { ReactComponent as CodiumLogo } from "./img/codium.svg";
 import { ReactComponent as TauriLogo } from "./img/tauri.svg";
 import { ReactComponent as RustLogo } from "./img/rust.svg";
+import { ReactComponent as ViteLogo } from "./img/vite.svg";
 
 import avatar from "./img/avatar.webp";
 
@@ -221,8 +221,13 @@ function DownPart() {
                     </Link>
                 </Grid>
                 <Grid>
-                    <Link href="https://gohugo.io/">
-                        <HugoOriginal size="80px" />
+                    <Link href="https://vitejs.dev/">
+                        <ViteLogo
+                            style={{
+                                width: "80px",
+                                height: "80px",
+                            }}
+                        />
                     </Link>
                 </Grid>
             </Grid.Container>
