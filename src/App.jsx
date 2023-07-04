@@ -31,15 +31,12 @@ import { ReactComponent as CodiumLogo } from "./img/codium.svg";
 import { ReactComponent as TauriLogo } from "./img/tauri.svg";
 import { ReactComponent as RustLogo } from "./img/rust.svg";
 
+import avatar from "./img/avatar.webp";
+
 function MyAvatar() {
     return (
         <Display shadow caption="小伞可爱捏">
-            <Image
-                shadow
-                width="15"
-                height="15"
-                src={require("./img/avatar.webp")}
-            />
+            <Image shadow width="15" height="15" src={avatar} />
         </Display>
     );
 }
@@ -79,7 +76,8 @@ function UpPart() {
                 gap={2}
                 alignContent="center"
                 alignItems="center"
-                justify="center">
+                justify="center"
+            >
                 <Grid>
                     <Link href="https://blog.tibrella.top/">
                         <Button type="success">Blog</Button>
@@ -108,7 +106,8 @@ function DownPart() {
                 alignContent="center"
                 alignItems="center"
                 justify="center"
-                gap={1}>
+                gap={1}
+            >
                 <Grid>
                     <Link href="https://archlinux.org">
                         <ArchLogo
@@ -164,7 +163,8 @@ function DownPart() {
                 alignContent="center"
                 alignItems="center"
                 justify="center"
-                gap={1}>
+                gap={1}
+            >
                 <Grid>
                     <Link href="https://fishshell.com/">
                         <FishLogo
@@ -232,7 +232,8 @@ function DownPart() {
                 gap={2}
                 alignContent="center"
                 alignItems="center"
-                justify="center">
+                justify="center"
+            >
                 <Grid>
                     <Link href="https://twitter.com/pinghigh24678">
                         <Twitter />
@@ -263,7 +264,8 @@ function App() {
                     justifyContent: "center",
                     // margin: "auto auto",
                     height: "100vh",
-                }}>
+                }}
+            >
                 <Card
                     shadow
                     width="50"
@@ -275,21 +277,24 @@ function App() {
                         // justifyContent: "center",
                         margin: "auto auto",
                         // height: "100vh",
-                    }}>
+                    }}
+                >
                     <div
                         style={{
                             position: "absolute",
                             top: "5px",
                             right: "5px",
                         }}
-                        onClick={switchThemes}>
+                        onClick={switchThemes}
+                    >
                         {themeType === "light" ? <Sun /> : <Moon />}
                     </div>
                     <div>
                         <Grid.Container
                             alignContent="center"
                             alignItems="center"
-                            justify="center">
+                            justify="center"
+                        >
                             <Grid>
                                 <UpPart />
                             </Grid>
@@ -299,7 +304,8 @@ function App() {
                         <Grid.Container
                             alignContent="center"
                             alignItems="center"
-                            justify="center">
+                            justify="center"
+                        >
                             <Grid>
                                 <DownPart />
                             </Grid>
