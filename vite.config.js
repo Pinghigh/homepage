@@ -50,7 +50,7 @@ export default defineConfig({
         compression({
             algorithm: "brotliCompress",
             exclude: [/\.(br)$/],
-            deleteOriginalAssets: true,
+            deleteOriginalAssets: false,
         }),
     ],
     build: { brotliSize: true, reportCompressedSize: false },
