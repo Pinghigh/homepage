@@ -1,3 +1,4 @@
+import million from "million/compiler";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
 import { defineConfig } from "vite";
@@ -14,6 +15,7 @@ export default defineConfig({
         },
     },
     plugins: [
+        million.vite({ optimize: true }),
         react(),
         svgr({
             svgrOptions: {

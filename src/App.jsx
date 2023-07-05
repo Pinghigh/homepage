@@ -1,3 +1,5 @@
+import { block } from "million/react";
+
 import {
     Grid,
     Card,
@@ -33,15 +35,15 @@ import { ReactComponent as ViteLogo } from "./img/vite.svg";
 
 import avatar from "./img/avatar.webp";
 
-function MyAvatar() {
+const MyAvatar = block(function MyAvatarElement() {
     return (
         <Display shadow caption="小伞可爱捏">
             <Image shadow width="15" height="15" src={avatar} />
         </Display>
     );
-}
+});
 
-function Intro() {
+const Intro = block(function IntroContent() {
     return (
         <div>
             <Text h1>This is Tibrella</Text>
@@ -55,7 +57,7 @@ function Intro() {
             </Text>
         </div>
     );
-}
+});
 
 function UpPart() {
     return (
@@ -99,7 +101,7 @@ function UpPart() {
     );
 }
 
-function DownPart() {
+const DownPart = function DownPartContent() {
     return (
         <>
             <Grid.Container
@@ -252,9 +254,9 @@ function DownPart() {
             </Grid.Container>
         </>
     );
-}
+};
 
-function App() {
+const App = block(function AppContent() {
     const [themeType, setThemeType] = useState("light");
     const switchThemes = () => {
         setThemeType((last) => (last === "dark" ? "light" : "dark"));
@@ -320,6 +322,6 @@ function App() {
             </div>
         </GeistProvider>
     );
-}
+});
 
 export default App;
