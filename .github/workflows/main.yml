@@ -17,4 +17,4 @@ jobs:
               with:
                   ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
                   BRANCH: pages
-                  FOLDER: bdist
+                  FOLDER: dist
