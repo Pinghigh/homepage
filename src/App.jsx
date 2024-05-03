@@ -57,7 +57,7 @@ function Intro() {
 function UpPart() {
   return (
     <>
-      <Grid.Container wrap="wrap" gap="5">
+      <Grid.Container gap="4">
         <Grid>
           <card>
             <MyAvatar />
